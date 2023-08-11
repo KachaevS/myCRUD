@@ -6,7 +6,7 @@
 </head>
 <body>
 
-<h2>USERS</h2>
+<h2>ПОЛЬЗОВАТЕЛИ</h2>
 
 <style>
     table {
@@ -19,8 +19,8 @@
     <thead>
     <tr>
         <th>id</th>
-        <th>name</th>
-        <th>born</th>
+        <th>Имя</th>
+        <th>Год рождения</th>
     </tr>
     </thead>
     <tbody>
@@ -28,14 +28,13 @@
         <td th:text="${user.id}"></td>
         <td th:text="${user.name}"></td>
         <td th:text="${user.yearOfBirth}"></td>
-        <td><a th:href="@{/edit/{id}(id=${user.id})}">edit</a>
-        <td><a th:href="@{/delete/{id}(id=${user.id})}">delete</a>
+        <td><a th:href="@{/edit/{id}(id=${user.id})}">изменить</a>
+        <td><a th:href="@{/delete/{id}(id=${user.id})}">удалить</a>
 
     </tr>
     </tbody>
 </table>
 
-<h2>Add</h2>
-<a th:href="@{/new}">Add new user</a>
+<a th:href="@{/new}">Добавить</a>
 </body>
 </html>
